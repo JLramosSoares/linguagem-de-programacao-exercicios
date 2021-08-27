@@ -10,7 +10,7 @@ idade = int(input("\nIdade: "))
 
 while idade > 0 :
 	
-	nota = randint(1,3)
+	nota = int(input("Nota: "))
 	
 	if nota == 1:
 		qtndRegular += 1

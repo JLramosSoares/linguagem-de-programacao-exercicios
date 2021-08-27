@@ -23,11 +23,10 @@ for i in range(10):
 	if div == 2:
 		qtndPrimos += 1
 
-
-
-print("\nQtnd primos: {}".format(qtndPrimos))
-print("Soma dos números múltiplos de 3: {}".format(somaMultiplosTres))
-
 if qtndParesMaioresVinte > 0:
-	mediaParesMaioresVinte = somaParesMaioresVinte/qtndParesMaioresVinte
-	print("A média dos pares que são maiores que 20: {}".format(mediaParesMaioresVinte))
+	mediaParesMaiorVinte = somaParesMaioresVinte / qtndParesMaioresVinte
+	print("Média pares maiores que 20: {}".format(mediaParesMaiorVinte))
+
+print("Quantidade de números primos: {}".format(qtndPrimos))	
+print("Soma dos números múltiplos de três: {}".format(somaMultiplosTres))		
+

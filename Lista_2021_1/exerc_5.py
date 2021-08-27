@@ -1,7 +1,13 @@
-for i in range(10):
+numeros = []
 
-	fat = 0
-	number = int(input("Número: "))
+for i in range(10):
 	
-	for n in range(1, number+1):
-		fat = n *  
+	numeros.append(int(input("Digite um número: ")))
+
+for numero in numeros:
+	
+	fat = 1
+	for i in range(2, numero + 1):
+		fatorial = fat = fat * i
+		
+	print("\n!({}) = {}".format(numero, fatorial))

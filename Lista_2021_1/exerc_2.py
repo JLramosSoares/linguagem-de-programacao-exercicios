@@ -8,7 +8,7 @@ for i in range(1, 11):
 		somaPrimos = qtndMultres = somaMultres = 0
 		somaMaiorIgualDezTrinta = qtndSomaMaiorIgualDezTrinta = 0
 	
-	number = randint(1,50)
+	number = int(input("Número: "))
 	
 	if (number % 3 == 0) and (number > 10):
 		somaMultres += number
