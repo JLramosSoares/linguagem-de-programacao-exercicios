@@ -1,61 +1,62 @@
 from random import randint
 
-idadesInferioresDezoito = pessoasMaioresOitentaQuilos = 0 
-somaAlturaTodos = 0 
-somatoriaIdadesTimeUm = 0
-somatoriaIdadesTimeDois = 0 
-somatoriaIdadesTimeTres = 0
-somatoriaIdadesTimeQuatro = 0
-somatoriaIdadesTimeCinco = 0
+timeUmIdades = []
+timeDoisIdades = []
+timeTresIdades = []
+timeQuatroIdades = []
+timeCincoIdades = []
 
-for i in range(1,5):
+somaAlturas = cont = menorQueDezoito = 0
+
+for time in range(1,6):
 	
-	if i == 1:
-		print("\nTIME UM")
+	for i in range(1, 12):
 		
-	if i == 2:
-		print("\nTIME DOIS")
+		idade = randint(10, 30)
+		altura = randint(140, 200)
+		peso = randint(50, 90)
 		
-	if i == 3:
-		print("\nTIME TRÊS")
-		
-	if i == 4:
-		print("\nTIME QUATRO")
-		
-	if i == 5:
-		print("\nTIME CINCO")
-
-	for jogador in range(1, 11):
-		
-		idade = randint(1, 100)
-		altura = randint(150, 200)
-		peso = randint(50, 200)
-
-		
-		if i == 1:
-			somatoriaIdadesTimeUm += idade
-		
-		if i == 2:
-			somatoriaIdadesTimeDois = 0
-			somatoriaIdadesTimeDois += idade
-		
-		if i == 3:
-			somatoriaIdadesTimeTres = 0
-			somatoriaIdadesTimeTres += idade
+		if time == 1: 	
+			timeUmIdades.append(idade)
 			
-		if i == 4:
-			somatoriaIdadesTimeQuatro = 0 
-			somatoriaIdadesTimeQuatro += idade
+		if time == 2:
+			timeDoisIdades.append(idade)
 		
-		if i == 5:
-			somatoriaIdadesTimeCinco = 0
-			somatoriaIdadesTimeCinco += idade	
-			
-		if idade < 18:
-			idadesInferioresDezoito += 1
-
+		if time == 3:
+			timeTresIdades.append(idade)
+		
+		if time == 4:
+			timeQuatroIdades.append(idade)
+		
+		if time == 5:
+			timeCincoIdades.append(idade)
+		
 		if peso > 80:
-			pessoasMaioresOitentaQuilos += 1
-			
-		somaAlturaTodos += altura
+			cont += 1
+		
+		if idade < 18:
+			menorQueDezoito += 1
+		
+		somaAlturas += altura
+
+mediaIdadesTimeUm = sum(timeUmIdades)/11
+mediaIdadesTimeDois = sum(timeDoisIdades)/11
+mediaIdadesTimeTres = sum(timeTresIdades)/11
+mediaIdadesTimeQuatro = sum(timeQuatroIdades)/11
+mediaIdadesTimeCinco = sum(timeCincoIdades)/11						
+
+mediaAlturas = somaAlturas/55
+
+porcentagemMaiorOitenta = cont * 100 / 55 
+
+print("Jogadores menor de 18: {}".format(round(menorQueDezoito, 2)))
+print("Média da altura de todos: {}".format(round(mediaAlturas, 2)))
+print("Jogadores com mais de 80Kg: {}%".format(round(porcentagemMaiorOitenta, 2)))
+print("\nMédia da idade por time:")
+print("Time Um: {}".format(round(mediaIdadesTimeUm, 2)))
+print("Time Dois: {}".format(round(mediaIdadesTimeDois, 2)))
+print("Time Três: {}".format(round(mediaIdadesTimeTres, 2)))
+print("Time Quatro: {}".format(round(mediaIdadesTimeQuatro, 2)))
+print("Time Cinco: {}".format(round(mediaIdadesTimeCinco, 2)))
+
 

@@ -24,11 +24,11 @@ while idade > 0:
 
 mediaIdades = somaIdades / pessoas
 
-if qtndVinteQuarenta > 0:
+if qtndEntreVinteQuarenta > 0:
 	print("Qtnd idades entre 20 e 40: {}".format(qtndEntreVinteQuarenta))
 	
-print("Maior idade: ".format(maiorIdade))
-print("Menor idade: ".format(menorIdade))
-print("Média das idades: ".format(mediaIdades))
+print("Maior idade: {}".format(maiorIdade))
+print("Menor idade: {}".format(menorIdade))
+print("Média das idades: {}".format(mediaIdades))
 	 
 		
