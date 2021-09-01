@@ -13,8 +13,8 @@ lista_A = []
 lista_B = []
 
 for i in range(5):	
-	lista_A.append(randint(1, 100))
-	lista_B.append(randint(1, 100))
+	lista_A.append(randint(1, 500))
+	lista_B.append(randint(1, 500))
 
 lista_C = lista_A + lista_B
 
