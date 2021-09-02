@@ -5,17 +5,20 @@ números que se repetem nas duas listas. Mostre as três listas na tela.
 """
 
 from random import randint
-from interation_utils import duplicates
 
 listaNumerosA = []
 listaNumerosB = []
+listaNumerosRepetidos = []
 
 for i in range(10):    
     listaNumerosA.append(randint(1, 500))
     listaNumerosB.append(randint(1, 500))
-
-for numero in numeros:
     
+for i in range(10):
     
+    verificarNumerosRepetidos = listaNumerosA[i]
     
+    for number in listaNumerosA:
+        if verificarNumerosRepetidos == number:
+            listaNumerosRepetidos.append(listaNumerosA[i])
     
