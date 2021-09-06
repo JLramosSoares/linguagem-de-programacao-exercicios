@@ -13,5 +13,14 @@ for i in range(5):
     listaNumerosA.append(randint(1, 10))
     listaNumerosB.append(randint(1, 10))
     
-for i in range(len(listaNumerosA)):
+for number in listaNumerosA:
+    
+    verificador = 0
+    
+    for i in range(5):
+        if number == listaNumerosA[i]:
+            verificador += 1
+        
+    if verificador > 1:
+        numeroRepetidos.append(number)
     
