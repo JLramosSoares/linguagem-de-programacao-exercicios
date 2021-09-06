@@ -7,7 +7,7 @@ from random import randint
 
 listaNumerosA = []
 listaNumerosB = []
-numeroRepetidos = [] 
+numerosRepetidos = [] 
 
 for i in range(5):
     listaNumerosA.append(randint(1, 10))
@@ -22,5 +22,6 @@ for number in listaNumerosA:
             verificador += 1
         
     if verificador > 1:
-        numeroRepetidos.append(number)
+        if number not in numerosRepetidos:
+            numerosRepetidos.append(number)
     
