@@ -15,13 +15,25 @@ for i in range(5):
     
 for number in listaNumerosA:
     
-    verificador = 0
+    verificadorListaA = 0
+    verificadorListaB = 0
     
     for i in range(5):
         if number == listaNumerosA[i]:
-            verificador += 1
+            verificadorListaA += 1
         
-    if verificador > 1:
+        if number == listaNumerosB[i]:
+            verificadorListaB += 1
+        
+    if verificadorListaA > 1:
         if number not in numerosRepetidos:
             numerosRepetidos.append(number)
+    
+    if verificadorListaB > 1:
+        if number not in numerosRepetidos:
+            numerosRepetidos.append(number)
+
+print(listaNumerosA)
+print(listaNumerosB)
+print(numerosRepetidos)
     
