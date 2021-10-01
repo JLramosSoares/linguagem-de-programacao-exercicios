@@ -15,18 +15,36 @@ from random import randint
 matriz = []
 vendedores = []
 
-for i in range(4):
-    vendedores.append(input("Nome vendedor: "))
-
-matriz.append(vendedores)
-
-for i in range(4):
-    vendas = []
+for i in range(5):
+    linha = []
     for j in range(4):
-        vendas.append(randint(800, 3000))
-    matriz.append(vendas)
+        linha = [0] * 4
+    matriz.append(linha)
+
+for i in range(5):
+    vendedores.append(input("Nome do vendedor: "))
+
+for i in range(5):
+    for j in range(4):
+        if j == 0:
+            matriz[i][j] = vendedores[i]
+        else:
+            matriz[i][j] = randint(800, 3000)
 
 for linha in matriz:
-    print(linha)       
+    print(linha)
 
+for i in range(1, 3):
+    for j in range(1, 4): 
 
+        if j == 3:
+            if menorVendaMesTres > matriz[i][j]:
+                menorVendaMesTres = matriz[i][j]
+
+        if j == 1:
+            maiorVendaMesUm = matriz[i][j]
+        
+        if (maiorVendaMesUm < matriz[i][j]) and (j == 1):
+            maiorVendaMesUm = matriz[i][j]
+
+print("Maior venda do mês um: {}\nMenor venda do mês três: {}".format(maiorVendaMesUm, menorVendaMesTres))
