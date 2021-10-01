@@ -13,17 +13,19 @@ d) O total vendido por mês
 from random import randint
 
 matriz = []
-vendedores = []
+vendedores = [] 
 
+#Cria a matriz
 for i in range(5):
     linha = []
-    for j in range(4):
-        linha = [0] * 4
+    linha = [0] * 4
     matriz.append(linha)
 
+#Adiciona os nomes dos vendedores em um lista
 for i in range(5):
     vendedores.append(input("Nome do vendedor: "))
 
+#Preenche a matriz com vendedores na primeira coluna e nas restantes as vendas
 for i in range(5):
     for j in range(4):
         if j == 0:
@@ -34,17 +36,24 @@ for i in range(5):
 for linha in matriz:
     print(linha)
 
-for i in range(1, 3):
+#Encontra a menor venda do mês três e a maior do mês um
+for i in range(5):
     for j in range(1, 4): 
+
+        if j == 3 and i == 0:
+            menorVendaMesTres = matriz[i][j]
 
         if j == 3:
             if menorVendaMesTres > matriz[i][j]:
                 menorVendaMesTres = matriz[i][j]
 
-        if j == 1:
+        if j == 1 and i == 0:
             maiorVendaMesUm = matriz[i][j]
         
         if (maiorVendaMesUm < matriz[i][j]) and (j == 1):
             maiorVendaMesUm = matriz[i][j]
 
-print("Maior venda do mês um: {}\nMenor venda do mês três: {}".format(maiorVendaMesUm, menorVendaMesTres))
+#Calcula o valor total das vendas de cada vendedor
+
+
+print("\nMaior venda do mês um: {}\nMenor venda do mês três: {}".format(maiorVendaMesUm, menorVendaMesTres))
