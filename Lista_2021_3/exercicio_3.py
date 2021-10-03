@@ -14,6 +14,7 @@ from random import randint
 
 matriz = []
 vendedores = [] 
+totalVendas = []
 
 #Cria a matriz
 for i in range(5):
@@ -54,6 +55,30 @@ for i in range(5):
             maiorVendaMesUm = matriz[i][j]
 
 #Calcula o valor total das vendas de cada vendedor
+for i in range(5):
+    total = 0
+    for j in range(1, 4):
+        total += matriz[i][j]
+    totalVendas.append(total)
+        
+#Calcula o total de vendas por mês
+
+mesUmTotal = 0
+mesDoisTotal = 0
+mesTresTotal = 0
+
+for i in range(5):
+    for j in range(1, 4):
+        if j == 1:
+            mesUmTotal += matriz[i][j]
+        if j == 2:
+            mesDoisTotal += matriz[i][j]
+        if j == 3:
+            mesTresTotal += matriz[i][j]
 
 
+for i in range(5):
+    print("\nVendedor: {}\nTotal:{}".format(matriz[i][0],totalVendas[i]))
+
+print("\nTotal do mês:\nUm: {}\nDois: {}\nTrês: {} ".format(mesUmTotal, mesDoisTotal, mesTresTotal))
 print("\nMaior venda do mês um: {}\nMenor venda do mês três: {}".format(maiorVendaMesUm, menorVendaMesTres))
