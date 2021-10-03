@@ -13,7 +13,6 @@ d) O total vendido por mês
 from random import randint
 
 matriz = []
-vendedores = [] 
 totalVendas = []
 
 #Cria a matriz
@@ -22,15 +21,11 @@ for i in range(5):
     linha = [0] * 4
     matriz.append(linha)
 
-#Adiciona os nomes dos vendedores em um lista
-for i in range(5):
-    vendedores.append(input("Nome do vendedor: "))
-
 #Preenche a matriz com vendedores na primeira coluna e nas restantes as vendas
 for i in range(5):
     for j in range(4):
         if j == 0:
-            matriz[i][j] = vendedores[i]
+            matriz[i][j] = input("Nome do vendedor: ")
         else:
             matriz[i][j] = randint(800, 3000)
 
