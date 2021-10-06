@@ -42,8 +42,16 @@ for media in medias:
     else:
         status.append("Reprovado")
 
-nome = input("Pesquise um nome: ")
+print("\nPara sair da pesquisa digite exatamente 'exit'")
 
-for i in range(5):
-    if matriz[i][0] == nome:
-        print("\nNome: {}\nÍndice: {}\nNotas: {} e {}\nStatus: {}".format(nome, i, matriz[i][1], matriz[i][2], status[i]))
+nome = input("\nPesquise um nome: ")
+
+while nome != "exit":
+    for i in range(5):
+        if matriz[i][0] == nome:
+            print("\nNome: {}\nÍndice: {}\nNotas: {} e {}\nStatus: {}".format(nome, i, matriz[i][1], matriz[i][2], status[i]))
+
+    nome = input("\nPesquise um nome: ")
+
+    if nome == "exit":
+        break
