@@ -1,3 +1,9 @@
+"""
+Escreva um programa que leia uma matriz 6 x 10, 
+some as colunas individualmente e acumule as somas na 7ª linha da matriz.
+O programa deverá mostrar o resultado de cada coluna.
+"""
+
 from random import randint
 
 mat = []
