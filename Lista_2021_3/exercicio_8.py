@@ -14,7 +14,7 @@ medias = []
 
 aprovados = reprovados = 0
 
-for i in range(4):
+for i in range(10):
     alunos.append(input("Nome do aluno: "))
     medias.append(randint(0, 10))
 
@@ -39,4 +39,5 @@ print("\nMédia da classe: {}\nAprovados: {}\nReprovados: {}".format(mediaClasse
                                                                  aprovados,
                                                                  reprovados))
 
-print("\nAluno de maior média: {}\nMaior Média: {}".format(alunos[indiceMaiorMedia], maiorMedia))
+print("\nAluno de maior média: {}\nMaior Média: {}".format(alunos[indiceMaiorMedia],
+                                                           maiorMedia))
