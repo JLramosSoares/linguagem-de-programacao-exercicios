@@ -9,7 +9,7 @@ d) A média dos números da matriz que estão na terceira linha
 from random import randint
 
 matriz = []
-maioresDez = somaQuartaColuna = entreDezETrinta = media = 0
+somaMaioresDez = somaQuartaColuna = entreDezETrinta = media = 0
 
 for i in range(4):
     numeros = []
@@ -22,17 +22,18 @@ for lista in matriz:
 
 for i in range(4):
     for j in range(6):
+
         if matriz[i][j] > 10:
-            maioresDez += 1
+            somaMaioresDez += matriz[i][j]
         if j == 3:
             somaQuartaColuna += matriz[i][j]
         if 10 < matriz[i][j] < 30:
-            entreDezETrinta += matriz[i][j]
+            entreDezETrinta += 1
         if i == 2:
             media += matriz[i][j]
 
 media = media/6
 
 
-print("\nQuantidade entre 10 e 20: {}\nSoma maiores de 10: {}".format(entreDezETrinta, maioresDez))
+print("\nQuantidade entre 10 e 30: {}\nSoma maiores de 10: {}".format(entreDezETrinta, somaMaioresDez))
 print("Soma dos numeros da quarta coluna: {}\nMédia da terceira linha: {}".format(somaQuartaColuna, media))
