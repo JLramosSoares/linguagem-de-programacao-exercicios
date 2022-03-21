@@ -25,27 +25,25 @@ gênero, se for o caso.
 • Exiba na tela o desconto total concedido.
 """
 
-#Recebe a idade o genêro e se é estudante
+#Recebe a idade, genêro e se é estudante
 idade = int(input("Idade: "))
 genero = input("Genêro [M/F]: ")
 estudante = input("Estudante [S/N]: ")
-valor = 40
-desconto = 0
+precoPadrao = 40
+precoTotal = precoPadrao
 
+#Aplica o desconto adequado para cada condição
 if idade <= 6:
-    valor = 0
-    desconto = 40
+    precoTotal = 0
 else:
     if idade >= 65:
-        valor = 1
-        desconto = 39
+        precoTotal = 1
     if genero == 'F':
-        valor = valor - (valor * 0.25)
-        desconto = desconto - valor
+        precoTotal = precoTotal - (precoTotal * 0.25)
     if estudante == 'S':
-        valor = (valor / 2)
+        precoTotal = (precoTotal / 2)
 
+#Calcula o desconto
+desconto = precoPadrao - precoTotal
 
-
-
-print(valor)
+print("Total: R$ {}\nDesconto: R$ {}".format(precoTotal, desconto))
