@@ -40,7 +40,7 @@ else:
         precoTotal = 1
     if genero == 'F':
         precoTotal = precoTotal - (precoTotal * 0.25)
-    if estudante == 'S':
+    elif estudante == 'S':
         precoTotal = (precoTotal / 2)
 
 #Calcula o desconto
