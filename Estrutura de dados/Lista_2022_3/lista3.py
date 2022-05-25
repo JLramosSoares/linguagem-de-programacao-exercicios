@@ -29,9 +29,20 @@ def searchWord(word:str, array:list) -> int | None:
         
     return None
 
+def binarySearch(word:str, array:list, i=0, j=None) -> int:
+    if j == None: j = len(array)-1
+    if i <= j:
+        central = (i+j) // 2
+        if array[central] == word:
+            return central
+        elif array[central] < word:
+            return binarySearch(word, array, central+1, j)
+        else:
+            return binarySearch(word, array, i, central-1)
+
 if __name__ == '__main__':
     #Código da A
-    lista = makeList('desordenado.txt')
+    lista = makeList('Arquivos TXT/desordenado.txt')
     print('------Resultado A-------')
     print(lista)
     
@@ -41,7 +52,7 @@ if __name__ == '__main__':
     print(lista)
     
     #Código da C
-    saveList('ordenado.txt', lista)
+    saveList('Arquivos TXT/ordenado.txt', lista)
     
     #Código da D
     print('\n------Resultado D-------')
@@ -50,3 +61,5 @@ if __name__ == '__main__':
     
     #Código da E
     print('\n------Resultado E-------')
+    buscaIndice = binarySearch('sort', lista)
+    print('Índice da palavra \"sort\": ',buscaIndice)
